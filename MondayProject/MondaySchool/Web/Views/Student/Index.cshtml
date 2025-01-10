@@ -1,0 +1,31 @@
+@model List<Student>
+
+@{
+    ViewData["Title"] = "All students";
+}
+
+<div class="container mt-4">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Phone</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Firstname</td>
+                <td>@user.Lastname</td>
+                <td>@user.Phone</td>
+                <td>@user.Description</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
